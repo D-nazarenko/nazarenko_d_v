@@ -1,0 +1,482 @@
+@import "bourbon"
+@import "vars.sass"
+@import "app/libs/owl.carousel/dist/assets/owl.carousel.min"
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+	color: #111
+
+.hidden
+	display: none
+
+a
+	outline:none!important
+
+strong, b
+	font-family: "RobotoBold", sans-serif
+	font-weight: normal
+
+h1, h2, h3, h4, h5, h6, .button
+	font-family: "RobotoCondensedBold", sans-serif
+	font-weight: normal
+	text-transform: uppercase
+
+.text-right
+	text-align: right
+
+.text-left
+	text-align: left
+
+.top-line
+	background-color: $main-color
+	text-align: center
+	border-bottom: lighten($main-color, 6%) 1px solid
+	position: relative
+	z-index: 2
+	a
+		color: #fff
+	ul,li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	.sf-menu
+		margin: 0 auto -5px
+		float: none
+		display: inline-block
+		font-family: "RobotoCondensedRegular", sans-serif
+		font-size: 15px
+		background-color: $main-color
+		a
+			border-bottom: ligthen($main-color, 5%) 1px solid
+			border-left: transparent
+			border-top: none
+		>li
+			//border-bottom: ligthen(main-color, 5%) 1px solid
+			&.active
+				background-color: darken($main-color, 3%)
+				>a
+					color: $accent-color	
+			background-color: transparent
+			>a
+				color: #fff
+				border: none
+				padding: 25px 28px 25px
+				.fa
+					font-size: 11px
+					margin-left: 5px
+			&:hover
+				background-color: darken($main-color, 3%)
+				>a
+					color: $accent-color
+			
+			ul
+				li
+					background-color: $main-color
+					text-align: left
+					&:hover
+						>a
+							color: $accent-color
+					a
+						padding: 10px 20px
+						color: #fff
+
+
+//Top Pannel
+.top-pannel
+	background-color: rgba(lighten($main-color, 2%), .8)
+	color: #fff
+	padding: 50px 0
+	position: absolute
+	width: 100%
+	z-index: 1
+	box-shadow: rgba(255,255,255, .03) 0 5px 0 5px
+	&-content
+		position: relative
+		z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: url("../img/top-pannel-bg.jpg")
+		z-index: 0
+		opacity: .16
+	&-box
+		h4
+			font-family: "RobotoCondensedRegular", sans-serif
+			font-size: 15px
+			margin-top: 0
+			position: relative
+			&::after
+				content: ''
+				height: 1px
+				width: 100%
+				background-color: $accent-color
+				position: absolute
+				left: 0
+				bottom: -10px
+				opacity: .4
+		ul, li
+			padding: 0
+			margin: 0
+			list-style-type: none
+		li
+			display: inline-block
+			max-width: 48%
+			opacity: .4
+			font-size: 12px
+			padding: 0 10px 0 22px
+			position: relative
+			&:only-child
+				max-width: 100%
+			.fa
+				font-size: 16px
+				position: absolute
+				left: 0
+				top: 6px
+
+.logo
+	img
+		max-width: 100%
+	position: relative
+	top: -5px
+	left: -10px
+	&-1
+		img
+			max-width: 40%
+			padding: 25px 0
+
+.top-phone
+	font-size: 19px
+	font-family: "RobotoCondensedRegular", sans-serif
+	margin-top: -3px
+	span
+		font-size: 12px
+		opacity: .3
+
+.top-email
+	font-size: 14px
+	a
+		color: #fff
+		text-decoration: underline
+	span
+		opacity: .3
+
+.top-email,
+.top-phone
+	.fa
+		margin-right: 3px
+
+.button
+	color: #111
+	background-color: $accent-color
+	border-radius: 2px
+	font-size: 16px
+	padding: 10px 30px
+	position: relative
+	transition: background-color .25s ease
+	&:hover
+		background-color: lighten($accent-color, 10%)
+
+	&:active
+		background-color: darken($accent-color, 10%)
+
+	&::after
+		position: absolute
+		content: ""
+		background-color: darken($accent-color, 10%)
+		width: 100%
+		bottom: 0
+		height: 3px
+		left: 0
+		border-bottom-right-radius: 2px		
+		border-bottom-left-radius: 2px
+
+	&:hover, &:focus
+		text-decoration: none
+		color: #222
+
+
+	&-small
+		font-size: 14px
+		padding: 6px 22px
+		&::after
+			height: 2px
+
+.top-button
+	margin-top: 22px
+
+.slider-wrap
+	.slider-nav-container
+		position: relative
+	.slider-nav
+		color: #fff
+		font-size: 36px
+		position: absolute
+		width: 100%
+		z-index: 2
+		div
+			cursor: pointer
+			position: absolute
+			top: 370px
+			&:last-child
+				right: 0
+
+.slider
+	top: 0
+	width: 100%
+	overflow-x: hidden
+	.owl-dots
+		position: absolute
+		bottom: 1000px
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			margin: 0 3px
+			width: 14px
+			height: 14px
+			background-color: darken($main-color, 10%)
+			border-radius: 10em
+			cursor: pointer
+			transition: background-color .25s ease
+			&.active
+				background-color: $accent-color
+	.slide-wrap
+		float: left
+		&.active
+			h2
+				opacity: 1
+				left: 0
+			p
+				left: 0
+				opacity: 1
+			.slide-img-wrap
+				opacity: 1
+				transform: scale(1)
+	.slide
+		color: #fff
+		padding-bottom: 110px
+		position: relative
+		padding-top: 200px
+		h2
+			font-family: "RobotoCondensedLight", sans-serif
+			font-size: 48px
+			margin-top: 0
+			line-height: 55px
+			margin-bottom: 20px
+			position: relative
+			left: 100px
+			opacity: 0
+			transition: all 1s ease
+			&:first-line
+				color: $accent-color
+		p
+			font-family: "RobotoLight", sans-serif
+			opacity: .75
+			margin-bottom: 40px
+			position: relative
+			left: 50px
+			opacity: 0
+			transition: all 1.5s ease
+			transition-delay: .15s
+		&-bg
+			position: absolute
+			background-size: cover
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			&::before
+				content: ''
+				background-color: $main-color
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				position: absolute
+				opacity: .85
+		&-content
+			position: relative
+			z-index: 1
+			padding-top: 80px
+
+.slide-img-wrap
+	img
+		max-width: 100%
+	padding-top: 12px
+	opacity: 0
+	transform: scale(.8)
+	transition: all 1s
+	transition-delay: .25s
+
+	// Mobile Menu
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	float: left
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $main-color
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+
+.mobile-mnu
+	padding: 8px 15px 5px 15px
+	color: $main-color
+	cursor: pointer
+	background-color: $accent-color
+	position: relative
+	z-index: 2
+	b
+		display: block
+		text-align: center
+		font-family: "RobotoRegular", sans-serif
+		font-size: 15px
+
+.sect-services
+	.col-md-3
+		padding: 0
+
+
+
+.service-item
+	transition: transform .5s ease
+	margin-top: 50px
+	margin-bottom: 50px
+	border: 5px lighten($main-color, 10%) solid
+	transition: border-color .5s ease
+	text-align: center
+	padding-bottom: 20px
+	background-color: #fff
+	&:hover
+		position: relative
+		z-index: 2
+		transform: scale(1.075)
+		border-color: $accent-color
+		box-shadow: rgba(0,0,0,.35) 0 0 32px
+		.service-item-image
+			.fa
+				opacity: .8
+			&::before
+				opacity: .7
+		.service-item-stars
+			.fa
+				margin: 0 3px
+				color: $accent-color
+	h4
+		margin-top: 15px
+		font-size: 18px
+		margin-bottom: 5px
+	&-image
+		min-height: 192px
+		background-size: cover
+		position: relative
+		.fa
+			font-size: 30px
+			color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-left: -10px
+			margin-top: -10px
+			opacity: .0
+			transition: all .5s ease
+		&::before
+			position: absolute
+			content: ""
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: $main-color
+			opacity: 0
+			transition: all .5s ease
+	&-stars
+		font-size: 11px
+		color: #b4b4b4
+		.fa
+			margin-left: 1px
+			transition: all .5s ease
+	&-price
+		margin:
+			top: 5px
+			bottom: 15px
+		margin-top: 3px
+		font-size: 17px
+		font-family: "RobotoBold", sans-serif
+		span
+			font-size: 27px
+
+.footer-overlay
+	background-color: $main-color
+	position: absolute
+	background-size: cover
+	height: 9%
+	width: 100%
+	opacity: .8
+
+
+.main-footer
+	border-top: rgba(222,222,222,.3) 7px solid
+	margin-top: 10px
+	background-image: url("../img/footer-overlay.jpg")
+	width: 100%
+	height: 20%
+	background-position: center
+	color: #fff
+	font-size: 25px
+	ul
+		text-decoration: none
+		list-style: none
+		display: block
+		li
+			display: inline
+			a
+				color: $accent-color
+				margin-left: 10px
+				margin-top: 5px
+			p
+				font-family: RobotoLight
+				font-size: 17px
+			
+				
+				
+
+

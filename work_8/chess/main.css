@@ -1,0 +1,32 @@
+* {
+	margin: 0 auto;
+}
+#board{
+	margin-top: 20px;
+	position: relative;
+}
+
+.win-field {
+	font-size: 30px;
+	color: #000;
+	text-align: center;
+	border: 1px solid #000;
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	border-left: 2px solid #000;
+	width: 303px;
+	height: 75px;
+	border-radius: 0;
+	background-color: #fff;
+	position: absolute;
+	z-index: 1;
+	top: 41%;
+	left: 40%;
+	display: none;
+}
+
+
+
+#info {
+	display: none;
+}

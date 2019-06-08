@@ -1,0 +1,10 @@
+@font-face{
+	font-family:"Montserrat-Light";
+	font-style:normal;
+	font-weight:400;
+	src:url(../fonts/RobotoRegular/RobotoRegular.otf) format("otf"),
+	url(../fonts/RobotoRegular/RobotoRegular.woff) format("woff"),
+	url(../fonts/RobotoRegular/RobotoRegular.ttf) format("truetype")
+	}
+
+

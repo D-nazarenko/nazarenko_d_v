@@ -1,0 +1,48 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/superfish/dist/css/superfish"
+@import "app/libs/font-awesome/scss/font-awesome"
+@import "app/libs/jQuery.mmenu/dist/jquery.mmenu.all"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+.mm-menu
+	&.mm-offcanvas
+	z-index: 3
+	.fa
+		display: none
+
+	
+
+
+
+
+
+//ALWAYS END
+@import "media"
+
+
